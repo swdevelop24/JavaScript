@@ -1,4 +1,4 @@
-// 1. exchange value of variable a with b
+// 1. Exchange the value of variable a with the value of variable b.
 let a=30;
 let b=50;
 
