@@ -82,6 +82,7 @@
 
 
 
+
 // 5.findSmallestElement 함수를 구현해 주세요.
 
 // findSmallestElement 의 arr 인자는 숫자 값으로만 이루어진 배열입니다.
@@ -95,8 +96,9 @@
 // [100,200,3,0,2,1]
 
 // function findSmallestElement(arr){
-//     let mini=arr[0];
 //     if(arr.length == 0) return 0;
+//     let mini=arr[0];
+
 //     for(let i of arr){
 //         if(i < mini){
 //             mini =i; 
@@ -112,6 +114,9 @@
 // console.log("배열에서 최소값은?:",findSmallestElement(arr)); 
 // console.log("배열에서 최소값은?:", findSmallestElement(brr));
 // console.log("배열에서 최소값은?:", findSmallestElement(crr));
+
+
+
 
 
 
