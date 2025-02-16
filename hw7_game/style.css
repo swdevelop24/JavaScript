@@ -178,7 +178,7 @@ body::before {
     }
 
     #play-button, #reset-button {
-        width: 50%; 
+        width: 20%; 
         margin-bottom: 10px; 
     }
 }
