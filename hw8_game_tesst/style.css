@@ -1,0 +1,184 @@
+.creepster-regular {
+    font-family: "Creepster", cursive;
+    font-size: 40px; /* 원하는 크기로 조정 */
+}
+
+html{
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1635763600243-7de773972512?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    width: 100vw;
+    height: 100%;
+    background-size: cover; /* 화면 크기에 맞게 배경 이미지 늘어나도록 */
+    background-repeat: no-repeat;
+    background-position: center center; /* 기본적으로 중앙 정렬 */
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* 배경을 흐리게 */
+    z-index: -1;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: whitesmoke;
+    width: 100%;
+    min-height: 100vh; /* 화면 전체 높이 차지 */
+    overflow: hidden; /* 백그라운드가 밖으로 나가지 않도록 */
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative; 
+    top:15rem;
+    width: 70%; 
+    max-width: 800px; 
+    min-height: 100px; 
+    height: auto; 
+    padding: 20px; 
+    background-color: rgba(41, 2, 23, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box; 
+    z-index: 1; 
+}
+
+
+.content p {
+    font-size: clamp(14px, 2vw, 24px); /* 글자 크기 반응형 */
+    line-height: 1.5; /* 가독성을 위한 줄 간격 */
+}
+
+.content-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image-url.jpg'); /* 이미지 경로 */
+    background-size: cover; /* 비율 유지하면서 크기 조정 */
+    background-position: center; /* 이미지 중앙에 맞추기 */
+    z-index: 0; /* 이미지가 텍스트 뒤에 오도록 */
+}
+
+
+
+/* .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+}
+
+.content {
+    position:absolute;
+    top:45%;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    padding: 120px;
+    background-color: rgba(41, 2, 23, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing:border-box;
+} */
+.content-title {
+    color: cornflowerblue;
+    font-size: clamp(30px, 5vw, 70px); /* 최소 30px, 기본 5vw, 최대 70px */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.audio-container {
+    position: fixed;
+    top:5%;
+    background-color: rgba(203, 206, 147, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.audio-container audio {
+    width: 20vw;
+    min-width: 200px;
+}
+
+.main-img {
+    margin-top:10%;
+    margin-bottom:10%;
+    width: 20%;
+    height:150px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* 모바일에서도 항상 꽉 차도록 */
+        background-position: center center; /* 배경이 중앙에 오도록 */
+    }
+
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* 작은 화면에서도 배경이 잘 보이도록 */
+        background-position: center center;
+    }
+
+    .content {
+        width: 95%;
+        font-size: 14px;
+    }
+
+}
+
+.button-area {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    font-weight: 200;
+}
+
+#play-button, #reset-button {
+    margin-top:30px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) { 
+    .button-area {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #play-button, #reset-button {
+        width: 50%; 
+        margin-bottom: 10px; 
+    }
+}
