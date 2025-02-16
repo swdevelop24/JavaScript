@@ -42,26 +42,24 @@ body::before {
     position: relative;
     color: whitesmoke;
     width: 100%;
-    min-height: 100vh; /* 화면 전체 높이 차지 */
+    height: 100vh; /* 화면 전체 높이 차지 */
     overflow: hidden; /* 백그라운드가 밖으로 나가지 않도록 */
-    box-sizing: border-box;
 }
 
 .content {
-    position: relative; 
-    top:15rem;
-    width: 70%; 
-    max-width: 800px; 
-    min-height: 100px; 
-    height: auto; 
-    padding: 20px; 
+    position: absolute;
+    top: 65%; /* 더 아래쪽으로 이동 */
+    transform: translateY(-50%);
+    width: 70%; /* 가로 크기 적당히 설정 */
+    max-width: 800px; /* 최대 너비 제한 */
+    height: auto;
+    padding: 20px; /* 패딩 적당히 설정 */
     background-color: rgba(41, 2, 23, 0.8);
     border-radius: 10px;
     text-align: center;
-    box-sizing: border-box; 
-    z-index: 1; 
+    box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+    z-index: 1; /* 이미지 위에 텍스트를 표시 */
 }
-
 
 .content p {
     font-size: clamp(14px, 2vw, 24px); /* 글자 크기 반응형 */
@@ -113,8 +111,8 @@ body::before {
 }
 
 .audio-container {
-    position: fixed;
-    top:5%;
+    position: absolute;
+    top:20%;
     background-color: rgba(203, 206, 147, 0.5);
     padding: 10px;
     border-radius: 10px;
@@ -133,30 +131,6 @@ body::before {
     height:150px;
 }
 
-@media (max-width: 768px) {
-    body {
-        background-size: cover; /* 모바일에서도 항상 꽉 차도록 */
-        background-position: center center; /* 배경이 중앙에 오도록 */
-    }
-
-    .content {
-        width: 90%;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        background-size: cover; /* 작은 화면에서도 배경이 잘 보이도록 */
-        background-position: center center;
-    }
-
-    .content {
-        width: 95%;
-        font-size: 14px;
-    }
-
-}
 
 .button-area {
     display: flex;
@@ -180,5 +154,29 @@ body::before {
     #play-button, #reset-button {
         width: 50%; 
         margin-bottom: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* 모바일에서도 항상 꽉 차도록 */
+        background-position: center center; /* 배경이 중앙에 오도록 */
+    }
+
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* 작은 화면에서도 배경이 잘 보이도록 */
+        background-position: center center;
+    }
+
+    .content {
+        width: 95%;
+        font-size: 14px;
     }
 }
