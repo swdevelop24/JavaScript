@@ -112,7 +112,6 @@ nav{
     margin: 70px auto;
     text-align: center;
     width:80%;
-    gap:5px solid black;
 }
 
 .show-container h2, .skill-container h2, .about-container h2 {
