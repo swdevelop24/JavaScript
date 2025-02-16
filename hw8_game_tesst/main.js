@@ -51,12 +51,12 @@ function play() {
     let userValue = userInput.value; //태그에 있는 값 가지고 오기
     // console.log(userValue);
     if (userValue < 1 || userValue > 100) {
-        resultArea.textContent = "1과 100사이 숫자를 입력해 주세요"
+        resultText.textContent = "1~100 숫자only!"
         return;
     }
 
     if (history.includes(userValue)) {
-        resultArea.textContent = "이미 입력한 숫자! 다른 숫자를 입력해주세요";
+        resultText.textContent = "이미 입력한 숫자! 다른 숫자를 입력해주세요";
         return;
     }
     chances--;

@@ -180,5 +180,6 @@ body::before {
     #play-button, #reset-button {
         width: 50%; 
         margin-bottom: 10px; 
+        display:hidden;
     }
 }
