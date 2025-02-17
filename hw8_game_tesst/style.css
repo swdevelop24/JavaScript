@@ -70,6 +70,11 @@ body::before {
     font-family: "Creepster";
 }
 
+.result-text{
+    font-family: "Creepster";
+    color:yellow;
+}
+
 .audio-container {
     position: fixed;
     top:5%;

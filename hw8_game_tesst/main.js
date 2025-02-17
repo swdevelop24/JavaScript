@@ -51,12 +51,12 @@ function play() {
     let userValue = userInput.value; //태그에 있는 값 가지고 오기
     // console.log(userValue);
     if (userValue < 1 || userValue > 100) {
-        resultText.textContent = "1~100 숫자only!"
+        resultText.textContent = "1~100 Number only!"
         return;
     }
 
     if (history.includes(userValue)) {
-        resultText.textContent = "You did it already";
+        resultText.textContent = "You did it already!";
         return;
     }
     chances--;
