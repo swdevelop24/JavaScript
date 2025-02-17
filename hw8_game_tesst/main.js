@@ -8,10 +8,10 @@
 //유저가 1~100 범위 밖에 숫자를 입력하면 알려준다. 기회를 깎지 않는다.
 //유저가 이미 입력한 숫자를 또 입력하면, 알려준다, 기회를 깎지 않는다. 
 
-document.body.addEventListener('click', function() {
-    let audio = document.getElementById('myAudio');
-    audio.pause();  // 오디오 정지
-});
+// document.body.addEventListener('click', function() {
+//     let audio = document.getElementById('myAudio');
+//     audio.pause();  // 오디오 정지
+// });
 
 let correctAnswer = document.querySelector(".correct-answer");
 
@@ -56,7 +56,7 @@ function play() {
     }
 
     if (history.includes(userValue)) {
-        resultText.textContent = "이미 입력한 숫자! 다른 숫자를 입력해주세요";
+        resultText.textContent = "You did it already";
         return;
     }
     chances--;
