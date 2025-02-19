@@ -1,0 +1,69 @@
+body{
+  background:rgba(255, 192, 241,0.2);
+  color: rgb(70, 173, 115);
+}
+
+.container{
+    background-color:white;
+    min-height: 100vh;
+    min-width: 60vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+.task-area{
+    border:1px solid lightgray;
+    margin-top:2em;
+}
+
+.task-tabs{
+    display: flex;
+    border-bottom:1px solid lightgray;
+    position:relative; 
+}
+
+.task-tabs div{
+    padding:1em;
+}
+
+#under-line{
+    height:4px; 
+    background-color:rgba(55, 224, 202, 0.9);
+    position: absolute;
+    width: 78px; 
+    left:0px;
+    top:52px;
+    padding:0px; /*div값의 기본 패딩값을 없애주기*/
+}
+
+.task{
+    display:flex;
+    justify-content: space-between;
+    padding: 1.2em;
+    font-size: 20px;
+}
+
+
+.task-done{
+  text-decoration: line-through;
+}
+
+.task-complete{
+    background-color:rgba(250, 235, 215,0.4);
+}
+
+.icon-check{
+    color:green;
+    padding-right:50px; 
+}
+
+
+.icon-return{
+    color:rgb(136, 7, 175);
+    padding-right:50px; 
+
+}
+
+.icon-delete{
+    color:rgb(254, 137, 130);
+}
