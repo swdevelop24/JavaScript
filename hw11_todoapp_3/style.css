@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    background:rgba(255, 192, 241,0.2);
+    color: rgb(70, 173, 115);
+    font-weight:300;
+    box-sizing:border-box;
+}
+  
+  .container {
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    max-width:1000px;
+    border-top: 7px dotted rgba(204, 169, 240, 0.3); 
+    border-bottom: 7px dotted rgba(204, 169, 240, 0.3); 
+    height: 100%;
+    min-height: 100vh;
+    width: 90%;
+  }
+
+
+  .task-input {
+    /* 패딩과 마진을 부드럽게 적용*/
+    transition: padding-top 0.2s ease, margin-top 0.2s ease; 
+    width: 70%;
+    height:80px;  
+    border: 1px solid blanchedalmond;
+  }
+
+  .task-input:focus {
+    outline: 3px solid rgb(47, 4, 71); 
+    border:none;
+    transition: 0.5s;
+    padding-top: 35px;
+  }
+  
+
+  .input-area {
+    position: relative;
+  }
+  
+  /* 부모 요소: <div class="input-area"> */
+  .input-area span {
+    margin: 0;
+    position: absolute;
+    color: #8f8f8f;
+    font-size: 14px;
+    top: 6px;
+    left: 10px;
+  }
+  
+  /*focus를 고려하여 형제요소 선택.. 인풋요소에만 포커스 가능하므로*/ 
+  .task-input:focus+label > span{
+    color: #060d77;
+  } 
+  
+  .button-add {
+    border: none;
+    background-color: blanchedalmond;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  }
+  .button-add:hover {
+    background-color: pink;
+  }
+  .button-add:active {
+    background-color: #f3f4f6;
+
+  }
+  
+  .task-list-container {
+    border: 1px solid rgb(141, 137, 143);
+    margin-top: 1em;
+    position: relative;
+  }
+  .tab-type {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .tab-type div {
+    padding: 1em;
+    cursor: pointer;
+  }
+  
+  #tab-underline {
+    background-color: lightpink;
+    height: 4px !important;
+    position: absolute;
+    top: 52px;
+    left: 5px;
+    width: 40px;
+    transition: 0.5s;
+    padding: 0px;  /*div에 있는 기본 패딩 없애기*/
+  }
+  
+
+  /*main.js task 부분*/ 
+  .task {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+  }
+
+    /*main.js task 부분*/ 
+  .task span {
+    padding: 1em;
+  }
+
+    /*main.js task 부분*/ 
+  .button-box {
+    display: flex;
+  }
+  
+    /*main.js task 부분*/ 
+  .button-box button {
+    /* height: 100%; */
+    border: none;
+    width: 5em;
+    background-color: white;
+    transition: 0.5s;
+  }
+
+  .button-box button:first-child:hover {
+    background-color: rgba(35, 124, 50,.2);
+  }
+  .button-box button:nth-child(2):hover {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  
+  .fa-check {
+    color: rgb(20, 141, 20);
+  }
+  
+  .fa-trash {
+    color: rgba(243, 6, 6, 0.8);
+  }
+  .fa-undo-alt {
+    color: rgba(82, 9, 92, 0.7);
+  }
+  
+  .task-done {
+    text-decoration: line-through;
+    background-color:rgba(250, 235, 215,0.4);
+    transition: 0.5s;
+  }
