@@ -59,6 +59,11 @@ body{
     display:none;
   }
 
+  /*돋보기 크기*/
+  .search-area .icon-button{
+    font-size:20px;
+    margin-right: 10px;
+  }
 
 
 
@@ -78,6 +83,11 @@ body{
         position: absolute;
         top:0.5em;
         left: 2em;
+        white-space: nowrap;
+    }
+
+    #search-input {
+      width: 120px;
     }
 
     /* 모바일에서 메뉴들이 안보이도록 */
