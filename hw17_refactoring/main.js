@@ -41,7 +41,7 @@ const getData = async () => {
 
 
     } catch (error) {
-        console.log("error", error);
+        // console.log("error", error);
         errorRender(error.message); 
     }
 
@@ -51,7 +51,7 @@ const getNews = async () => {
     url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr&category=entertainment&pageSize=${PAGE_SIZE}`);
     // console.log("uuu", url);
 
-    getData();
+    await getData();
 
 }
 
@@ -68,7 +68,7 @@ const getNewsByCategory = async (event) => {
     // console.log("category", category);
     url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr&category=${category}&pageSize=${PAGE_SIZE}`)
 
-    getData();
+    await getData();
 
 };
 
@@ -76,12 +76,13 @@ const getNewsByCategory = async (event) => {
 
 //버튼 대신 엔터키 누를때도 입력가능.
 const searchInput = document.getElementById("search-input");
-
-searchInput.addEventListener("keydown", (event) => {
+searchInput.addEventListener("keydown", async (event) => {
     if (event.key === "Enter") {
-        getNewsByKeyword();
+        await getNewsByKeyword();
     }
 });
+
+
 
 const getNewsByKeyword = async () => {
 
@@ -90,7 +91,7 @@ const getNewsByKeyword = async () => {
 
     url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr&q=${keyword}&pageSize=${PAGE_SIZE}`)
 
-    getData();
+    await getData();
 }
 
 
