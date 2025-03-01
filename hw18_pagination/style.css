@@ -67,6 +67,12 @@ body {
 }
 
 
+/*돋보기 크기*/
+.search-area .icon-button {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
 
 
 /*돋보기옆 서치 처음 안보이도록*/
@@ -74,17 +80,13 @@ body {
   display: none;
 }
 
-/*돋보기 크기*/
-.search-area .icon-button {
-  font-size: 1.2em;
-}
 
 
 /* input 스타일 바꾸기 */
 input#search-input {
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom:20px; 
+  margin-bottom:3em; 
   padding:10px;
   border:none;
   border-bottom: 2px solid green !important;
@@ -130,7 +132,7 @@ input#search-input {
 }
 
 .menus button:hover {
-  background-color: beige;
+  background-color: lightgrey;
 }
 
 .news-img-size {
@@ -196,22 +198,45 @@ input#search-input {
     display: block;
     position: absolute;
     top: 1em;
-    left: 0.5em;
+    left: 1em;
+    font-size:30px;
   }
+
+
 
   /* 서치박스가 돋보기 옆으로 오게 조절 */
   .search-area {
     position: absolute;
-    top: 1em;
-    left: 2em;
+    top: 1.2em;
+    left: 4.5em;
     white-space: nowrap;
     margin-bottom:20px;
+
   }
 
 
+  input {
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom:20px; 
+    padding:10px;
+    border:none;
+    border-bottom: 2px solid green !important;
+  }
 
   input#search-input {
-    width: 60%;
+    width: 40%;
+    margin-bottom:20px; 
+    padding:10px;
+    border:none;
+    border-bottom: 2px solid green !important;
+    font-size:0.9em;
+  }
+
+  /* 포커스 상태일 때 스타일: 포커스 아웃라인 제거 */
+  input[type="text"]:focus {
+    outline: none; 
   }
 
 
