@@ -103,6 +103,12 @@ input#search-input {
 }
 
 
+  /* 포커스 상태일 때 스타일: 포커스 아웃라인 제거 */
+  input[type="text"]:focus {
+    outline: none; 
+  }
+
+
 
 /* 헤드라인 */
 .head-line {
@@ -234,10 +240,6 @@ input#search-input {
     font-size:0.9em;
   }
 
-  /* 포커스 상태일 때 스타일: 포커스 아웃라인 제거 */
-  input[type="text"]:focus {
-    outline: none; 
-  }
 
 
   /* 모바일에서 메뉴들이 안보이도록 */
