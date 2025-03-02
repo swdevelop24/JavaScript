@@ -1,0 +1,254 @@
+body {
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/* 사이드메뉴 */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+ 
+}
+
+
+
+/* 사이드메뉴내 일반버튼 */
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+  color:white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 0px;
+  white-space: normal;
+
+}
+
+/* 사이드메뉴내 x버튼 */
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+  color:white;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu-list button:hover {
+  background-color: gray;
+  width:100%;
+  border-radius: 3px;
+}
+
+/* 햄버거 메뉴 처음에 안보이도록 */
+.openbtn {
+  display: none;
+}
+
+
+/*돋보기 크기*/
+.search-area .icon-button {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+
+
+/*돋보기옆 서치 처음 안보이도록*/
+.search-area #input-area {
+  display: none;
+}
+
+
+
+/* input 스타일 바꾸기 */
+input#search-input {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom:3em; 
+  padding:10px;
+  border:none;
+  border-bottom: 2px solid green !important;
+}
+
+.search-button{
+  font-size:1em;
+  padding:1em;
+  size:2em;
+  font-weight: 500;
+  color: white;
+  border: none;
+  background-color:green;
+}
+
+
+  /* 포커스 상태일 때 스타일: 포커스 아웃라인 제거 */
+  input[type="text"]:focus {
+    outline: none; 
+  }
+
+
+
+/* 헤드라인 */
+.head-line {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.head-line svg {
+  width: 430px;
+}
+
+.menus {
+  margin-top: 1em;
+  display: flex;
+  /* 왼쪽 오른쪽 삐져나가지 않도록*/
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 4px double black;
+}
+
+.menus button {
+  border: none;
+  background: none;
+  margin: 5px;
+}
+
+.menus button:hover {
+  background-color: lightgrey;
+}
+
+.news-img-size {
+  /* 부모의 100%로 한계를 줌 */
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: 'cover';
+  width: 100%;
+}
+
+
+.news {
+  border-bottom: 2px solid black;
+  padding: 1em;
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top:30px;
+  max-width:100%;
+}
+
+
+.pagination{
+  cursor: pointer;
+}
+
+
+.page-link {
+  font-size: 1rem;
+  color: black;
+  
+}
+
+.page-item.active {
+  background-color:black;
+  border-color: white;
+
+}
+
+.page-item.active .page-link {
+  color: white;
+  font-weight: bold;
+  background-color: transparent; /* 여기서 배경색은 page-item이 먹고 있음 */
+  border: none; /* 필요에 따라 */
+}
+
+
+/* 모바일 반응형 */
+@media screen and (max-width:768px) {
+
+  /* 검색창아래에 아티클 오게 하기 위해서 */
+  .container{
+    padding-top:20px;
+
+  }
+
+  /* 햄버거 메뉴 화면 왼쪽에 보이도록 */
+  .openbtn {
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-size:30px;
+  }
+
+
+
+  /* 서치박스가 돋보기 옆으로 오게 조절 */
+  .search-area {
+    position: absolute;
+    top: 1.2em;
+    left: 4.5em;
+    white-space: nowrap;
+    margin-bottom:20px;
+
+  }
+
+
+  input {
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom:20px; 
+    padding:10px;
+    border:none;
+    border-bottom: 2px solid green !important;
+  }
+
+  input#search-input {
+    width: 40%;
+    margin-bottom:20px; 
+    padding:10px;
+    border:none;
+    border-bottom: 2px solid green !important;
+    font-size:0.9em;
+  }
+
+
+
+  /* 모바일에서 메뉴들이 안보이도록 */
+  .menus {
+    display: none !important;
+  }
+
+}
+
+
+
+
